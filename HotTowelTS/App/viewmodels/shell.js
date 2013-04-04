@@ -18,7 +18,6 @@ define(["require", "exports", 'durandal/system', 'durandal/plugins/router', 'ser
         return exports.router.activate('home');
     }
     function log(msg, data, showToast) {
-        // TODO: how to reference current module to pass to system.getModuleID?
-        logger.log(msg, data, system.getModuleId(null), showToast);
+        logger.log(msg, data, system.getModuleId(exports), showToast);
     }
 })

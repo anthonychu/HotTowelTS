@@ -8,3 +8,4 @@ define(["require", "exports", 'services/logger'], function(require, exports, __l
     }
     exports.activate = activate;
 })
+//@ sourceMappingURL=details.js.map

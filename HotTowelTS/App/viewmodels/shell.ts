@@ -4,6 +4,8 @@ import system = module('durandal/system');
 import _router = module('durandal/plugins/router');
 import logger = module('services/logger');
 
+declare var exports; // so that we can refer to this module later (might not be such a good idea)
+
 export var router = _router;
 
 export function activate() {
@@ -18,6 +20,5 @@ function boot() {
 }
 
 function log(msg, data, showToast) {
-    // TODO: how to reference current module to pass to system.getModuleID?
-    logger.log(msg, data, system.getModuleId(null), showToast);
+    logger.log(msg, data, system.getModuleId(exports), showToast);
 }
